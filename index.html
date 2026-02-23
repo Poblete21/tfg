@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Marca - La Pera de Jumilla</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #525659; /* Color de fondo oscuro típico de los visores */
+            overflow: hidden; /* Evita barras de desplazamiento dobles */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .error-msg {
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 2rem;
+        }
+        a {
+            color: #4da6ff;
+        }
+        .download-btn {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .download-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            transform: scale(1.05);
+        }
+        .download-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Incrustamos el PDF original. Debe estar en la misma carpeta que este HTML -->
+    <iframe src="MICTFG.PDF" title="MIC TFG PDF Original">
+        <div class="error-msg">
+            <p>Tu navegador no soporta la visualización integrada de PDFs.</p>
+            <p>Puedes <a href="MICTFG.PDF" download>descargar el PDF original aquí</a>.</p>
+        </div>
+    </iframe>
+
+    <!-- Botón de descarga disimulado -->
+    <a href="MICTFG.PDF" download class="download-btn" title="Descargar PDF original">
+        <svg viewBox="0 0 24 24">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+    </a>
+
+</body>
+</html>
